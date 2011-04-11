@@ -73,7 +73,8 @@ public class DeltaCloudClient implements API
 			this.username = username;
 			this.password = password;
 
-			JAXBContext jc = JAXBContext.newInstance(ObjectFactory.class.getPackage().getName());
+			//JAXBContext jc = JAXBContext.newInstance(ObjectFactory.class.getPackage().getName());
+			JAXBContext jc = JAXBContext.newInstance(org.deltacloud.ObjectFactory.class);
 
 			unmarshaller = jc.createUnmarshaller();
 			unmarshaller.setSchema(null);
